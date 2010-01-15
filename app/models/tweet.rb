@@ -15,6 +15,7 @@ class Tweet
   attribute :retweeted_status
   attribute :user_id, Friendly::UUID
   indexes :user_id
+  indexes :tweet_id
 
   def user
     User.first(:id => user_id)

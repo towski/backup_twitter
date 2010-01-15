@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100115043242) do
+ActiveRecord::Schema.define(:version => 20100115073958) do
 
   create_table "delayed_jobs", :force => true do |t|
     t.integer  "priority",   :default => 0
@@ -33,6 +33,11 @@ ActiveRecord::Schema.define(:version => 20100115043242) do
   create_table "index_friendships_on_user_id", :id => false, :force => true do |t|
     t.binary "user_id"
     t.binary "id"
+  end
+
+  create_table "index_tweets_on_tweet_id", :id => false, :force => true do |t|
+    t.binary "id"
+    t.string "tweet_id"
   end
 
   create_table "index_tweets_on_user_id", :id => false, :force => true do |t|

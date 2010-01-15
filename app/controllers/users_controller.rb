@@ -18,7 +18,7 @@ class UsersController < ApplicationController
     user.access_secret = access_secret
     user.save
     session[:user_id] = user.screen_name
-    #Job::FindFriends.create(user.id)
+    Job::UpdateHomeTimeline.new(user.screen_name).perform
     redirect_to root_url
   end
 end
