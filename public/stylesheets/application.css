@@ -1,0 +1,25 @@
+#body {
+  margin: auto;
+  font-family:'Lucida Grande',sans-serif; 
+  width: 500;
+}
+a:visited {
+  text-decoration:none;
+}
+#flash-messages {
+  background-color: white;
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  -moz-border-radius-topright: 5px;
+  -moz-border-radius-bottomright: 5px;
+}
+.flash{
+  position:relative;
+  margin:-16px 0 15px 0;
+  padding:17px 10px 15px 10px;
+  background:#ebebeb;
+  border-bottom:2px solid #cdcdcd;
+  color:#666;
+  font-weight:bold;
+  line-height:1.2;
+}

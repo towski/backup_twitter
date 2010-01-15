@@ -1,0 +1,40 @@
+#body {
+  width: 803px;
+}
+textarea {
+  font-family:'Lucida Grande',sans-serif; 
+}
+#stream {
+  float:left;
+  width: 514px;
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  background-color: white;
+  padding: 10px 30px 0px 20px;
+}
+#latest_entry {
+  font-size:1.77em;
+}
+ol.given{
+  line-height:16px;
+  font-size:14px;
+}
+li.given{
+  list-style-position:outside;
+  list-style-type:none;
+  height: 80px;
+  padding-top:20px;
+  border-bottom: 1px solid #aaa;
+}
+#info {
+  float:left;
+  width: 199px;
+  -moz-border-radius-topright: 5px;
+  -moz-border-radius-bottomright: 5px;
+  background-color: white;
+  padding: 20px 20px 20px 20px;
+}
+.gift {
+  height: 50px;
+  width: 50px;
+}

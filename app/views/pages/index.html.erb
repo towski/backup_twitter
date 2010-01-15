@@ -1,0 +1,20 @@
+<% content_for :stylesheets do %>
+  <%= stylesheet_link_tag 'gifts/index' %>
+  <style type='text/css'>
+    body { background: url('http://s.twimg.com/a/1262899036/images/themes/theme13/bg.gif') #B2DFDA repeat-y } 
+  </style>
+<% end %>
+<% content_for :javascript do %>
+  <%= javascript_include_tag 'prototype', 'effects', 'controls' %>
+<% end %>
+<h1> 
+<%= link_to "Give a gift", gifts_url %>
+</h1>
+<div id='stream'>
+  <p style='text-align:center'>Gifts recently given:</p>
+  <ol class='given'><% @user_gifts.each do |user_gift| %>
+    <li class='given'><%= image_tag user_gift.giver.profile_image_url || "", :style => "float:left", :title => user_gift.giver.twitter_name %>
+      <span style='margin-left:10px'>@<%= user_gift.receiver.twitter_name %> <%= user_gift.message %></span>
+      <%= image_tag user_gift.gift.url, :class => "gift", :style => "float:right" %></li>
+  <% end %></ol>
+</div>

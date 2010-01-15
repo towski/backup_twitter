@@ -1,0 +1,9 @@
+development:
+  consumer_key: fONTahyewBRucyaVxatsqQ
+  consumer_secret: hlOAXQlzJFgSXd52q9ATNymkjtJMeNvNsWE8iIp1w
+test:
+  consumer_key: fONTahyewBRucyaVxatsqQ
+  consumer_secret: hlOAXQlzJFgSXd52q9ATNymkjtJMeNvNsWE8iIp1w
+production:
+  consumer_key: fONTahyewBRucyaVxatsqQ
+  consumer_secret: hlOAXQlzJFgSXd52q9ATNymkjtJMeNvNsWE8iIp1w
