@@ -10,23 +10,6 @@
 <h1> Give a gift </h1>
 <div id='stream'>
   <%= show_flash_messages %>
-  <div id='give'>
-    <% form_for :gift, :url => gifts_url do |f| %>
-      <% @gifts.each do |gift| %>
-        <div style='float:left'>
-        <%= radio_button_tag 'id', gift.id %>
-        <%= image_tag gift.url, :class => "gift" %>
-        </div>
-      <% end %>
-      <p style='clear:both;padding-top:25px;'>
-      To: <%= text_field_with_auto_complete :user, :twitter_name %>
-      </p>
-      <p>
-      <%= text_area_tag 'message', "here's a present for you :)", :cols => 45 %>
-      </p>
-      <%= f.submit "give" %>
-    <% end %>
-  </div>
   <% if current_user.friends.count == 0 %>
     Still loading your friends
   <% else %>

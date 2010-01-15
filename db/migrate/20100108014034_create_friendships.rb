@@ -2,6 +2,8 @@ class CreateFriendships < ActiveRecord::Migration
   def self.up
     create_table :friendships, :id => false do |t|
       t.binary :id
+      t.text :attributes
+      t.integer :added_id
       t.timestamps
     end
 

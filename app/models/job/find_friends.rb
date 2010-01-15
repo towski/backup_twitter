@@ -1,6 +1,6 @@
 class Job::FindFriends < Job.new(:user_id)
-  def self.create(user_id)
-    job = new(user_id)
+  def self.create(screen_name)
+    job = new(screen_name)
     if Rails.env == "production"
       Delayed::Job.enqueue job
     else
@@ -14,10 +14,13 @@ class Job::FindFriends < Job.new(:user_id)
 
   def perform
     user.client.friends.each do |friend|
-      user = User.new 
-      user.set_twitter_fields(friend)
-      user.save
-      friendship = user.friendships.new :user_id => user.id
+      new_user = User.first(:screen_name => friend.screen_name)
+      if !new_user
+        new_user = User.new 
+        new_user.set_twitter_fields(friend)
+        new_user.save
+      end
+      friendship = user.friendships.create :friend_id => new_user.id
       friendship.save
     end
   end

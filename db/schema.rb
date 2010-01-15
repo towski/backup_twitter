@@ -26,6 +26,8 @@ ActiveRecord::Schema.define(:version => 20100115073958) do
 
   create_table "friendships", :id => false, :force => true do |t|
     t.binary   "id"
+    t.text     "attributes"
+    t.integer  "added_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
