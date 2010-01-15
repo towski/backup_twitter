@@ -1,5 +1,5 @@
-Sinatra::Application.set(:run,  true)
-Sinatra::Application.set(:environment,  :production)
+Sinatra::Application.set(:run, false)
+Sinatra::Application.set(:environment, :development)
 Api = Sinatra::Application unless defined? Api
 
 class Poller < Sinatra::Base

@@ -31,13 +31,13 @@ ActiveRecord::Schema.define(:version => 20100115043242) do
   end
 
   create_table "index_friendships_on_user_id", :id => false, :force => true do |t|
-    t.integer "user_id"
-    t.binary  "id"
+    t.binary "user_id"
+    t.binary "id"
   end
 
   create_table "index_tweets_on_user_id", :id => false, :force => true do |t|
-    t.binary  "id"
-    t.integer "user_id"
+    t.binary "id"
+    t.binary "user_id"
   end
 
   create_table "index_users_on_screen_name", :id => false, :force => true do |t|

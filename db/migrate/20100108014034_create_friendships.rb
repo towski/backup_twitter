@@ -6,7 +6,7 @@ class CreateFriendships < ActiveRecord::Migration
     end
 
     create_table :index_friendships_on_user_id, :id => false do |t|
-      t.integer :user_id
+      t.binary :user_id
       t.binary :id
     end
   end

@@ -9,7 +9,7 @@ class CreateTweets < ActiveRecord::Migration
 
     create_table :index_tweets_on_user_id, :id => false do |t|
       t.binary :id
-      t.integer :user_id
+      t.binary :user_id
     end
   end
 
