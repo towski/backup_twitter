@@ -1,2 +1,5 @@
 twitter --version 0.7.11
 bitly --version 0.4.0
+friendly
+sinatra --version 0.9.4
+twitter_server
