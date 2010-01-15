@@ -1,0 +1,9 @@
+<% content_for :stylesheets do %>
+  <% if @user_gift %>
+  <style type='text/css'>
+    body { background: url('<%= @user_gift.giver.profile_background_image_url %>') #<%= @user_gift.giver.profile_background_color %> repeat-y }
+  </style>
+  <% end %>
+<% end %>
+<%= image_tag @gift.url %>
+<%= link_to "send a gift!", gifts_url %>
