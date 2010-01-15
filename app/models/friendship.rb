@@ -1,8 +1,7 @@
 class Friendship
   include Friendly::Document
 
-  belongs_to :follower, :class_name => "User"
-  belongs_to :following, :class_name => "User"
-
-  indexes
+  attribute :friend_id, Friendly::UUID
+  attribute :user_id, Friendly::UUID
+  indexes :user_id
 end
