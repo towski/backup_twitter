@@ -49,6 +49,15 @@ class User
     end
   end
 
+  def create_tweet(api_tweet)
+    tweet = Tweet.first(:tweet_id => api_tweet.id)
+    if tweet
+      return tweet 
+    else
+      tweets.create api_tweet.except(:user)
+    end
+  end
+
   def set_twitter_fields(twitter_user)
     fields = twitter_user.except(:id, :created_at, :status).merge(:twitter_id => twitter_user.id, :twitter_created_at => Time.parse(twitter_user.created_at))
     fields.each do |key, value|

@@ -17,6 +17,11 @@ class Tweet
   indexes :user_id
   indexes :tweet_id
 
+  def self.create tweet
+    options = tweet.except("created_at", "id").merge("tweet_id" => tweet["id"], "tweet_created_at" => tweet["created_at"])
+    super options
+  end
+
   def user
     User.first(:id => user_id)
   end

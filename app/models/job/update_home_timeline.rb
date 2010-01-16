@@ -15,7 +15,7 @@ class Job::UpdateHomeTimeline < Job.new(:screen_name)
           friend.set_twitter_fields tweet.user
           friend.save
         end
-        friend.tweets.create tweet.except(:created_at, :user, :id).merge(:tweet_id => tweet.id, :tweet_created_at => tweet.created_at)
+        friend.create_tweet tweet
       end
     end
   end
